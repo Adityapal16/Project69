@@ -1,5 +1,7 @@
 import React from 'react'
-import Sign from '.'
+import Sign from './Sign'
+
+
 
 const page = () => {
   return (
