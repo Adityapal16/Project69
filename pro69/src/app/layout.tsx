@@ -1,6 +1,4 @@
-// app/layout.tsx
-
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -17,16 +15,20 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// SEO and metadata config
+// Metadata config
 export const metadata: Metadata = {
   title: "Aditya's Next App",
   description: "Resurrected from the ashes like a true dev 🧙‍♂️",
   authors: [{ name: "Aditya" }],
-  viewport: "width=device-width, initial-scale=1",
+};
+
+// ✅ Viewport config with themeColor
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#ffffff",
 };
 
-// Root layout component
 export default function RootLayout({
   children,
 }: {
